@@ -13,7 +13,7 @@ export class LoginPage {
     private get btnLogin() { return this.page.locator('#maincontent #send2') }
 
     async goToLogin() {
-        await this.page.goto("https://magento.softwaretestingboard.com/customer/account/login/")
+        await this.page.goto("https://magento.softwaretestingboard.com/customer/account/login/", { waitUntil: "load" })
     }
 
     async enterCredentials(username: string, password: string) {
