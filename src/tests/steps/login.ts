@@ -6,7 +6,6 @@ import { CustomWorld } from "../support/world";
 setDefaultTimeout(60 * 1000); 
 
 Given("I navigate to the login page", async function (this: CustomWorld) {
-  if (!this.page) throw new Error("Page is undefined!"); 
   const page = this.page!;
   this.loginPage = new LoginPage(page);
   await this.loginPage.goToLogin();
