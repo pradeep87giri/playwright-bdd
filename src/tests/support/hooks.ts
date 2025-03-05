@@ -5,7 +5,7 @@ import { CustomWorld } from "./world";
 let browser: Browser;
 
 Before(async function (this: CustomWorld) {
-  browser = await chromium.launch({ headless: true });
+  browser = await chromium.launch({ headless: false });
   this.page = await browser.newPage();
 });
 
