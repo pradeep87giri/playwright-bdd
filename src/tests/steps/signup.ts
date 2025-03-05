@@ -1,5 +1,5 @@
-import { Given, When, Then, setDefaultTimeout } from "@cucumber/cucumber";
-import { expect } from "@playwright/test";
+import { Given, Then, When, setDefaultTimeout } from "@cucumber/cucumber";
+import { getEmail } from "../../../config";
 import { SignupPage } from "../../pageObjects/signupPage";
 import { CustomWorld } from "../support/world";
 
@@ -15,19 +15,19 @@ When("I enter first name {string} and last name {string}", async function (this:
   await this.signupPage!.enterPersonalInformation(firstName, lastName);
 });
 
-When("I enter email {string}", async function (this: CustomWorld, email: string) {
+When("I enter email", async function (this: CustomWorld) {
+  const email = getEmail();
   await this.signupPage!.enterEmail(email);
 });
 
-When("I enter password {string} and confirm password {string}", async function (this: CustomWorld, password: string, confirmPassword: string) {
-  await this.signupPage!.enterPassword(password, confirmPassword);
+When("I enter password {string} and confirm password", async function (this: CustomWorld, password: string) {
+  await this.signupPage!.enterPassword(password);
 });
 
-When("I click the {string} button", async function (this: CustomWorld, buttonText: string) {
+When("I click the Create an Account button", async function (this: CustomWorld) {
   await this.signupPage!.clickSignup();
 });
 
 Then("I should see a success message {string}", async function (this: CustomWorld, expectedMessage: string) {
-  const message = await this.signupPage!.getSuccessMessage();
-  expect(message).toContain(expectedMessage);
+  await this.signupPage!.verifyMessage(expectedMessage);
 });

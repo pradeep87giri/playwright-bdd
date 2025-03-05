@@ -1,7 +1,8 @@
-# Feature: Login Functionality
+@login
+Feature: Login Functionality
 
-#   Scenario: Successful login
-#     Given I navigate to the login page
-#     When I enter username "user" and password "password"
-#     And I click the login button
-#     # Then I should see the dashboard page
+  Scenario: Successful login
+    Given I navigate to the login page
+    When I enter email and password "SecurePass123"
+    And I click the login button
+    Then Verify user is logged in successfully

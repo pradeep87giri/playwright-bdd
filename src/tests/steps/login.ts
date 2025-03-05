@@ -1,5 +1,5 @@
 import { Given, When, Then, setDefaultTimeout } from "@cucumber/cucumber";
-import { expect, Page } from "@playwright/test";
+import { getEmail } from "../../../config";
 import { LoginPage } from "../../pageObjects/loginPage";
 import { CustomWorld } from "../support/world";
 
@@ -11,14 +11,15 @@ Given("I navigate to the login page", async function (this: CustomWorld) {
   await this.loginPage.goToLogin();
 });
 
-When("I enter username {string} and password {string}", async function (this: CustomWorld, username: string, password: string) {
-  await this.loginPage!.enterCredentials(username, password);
+When("I enter email and password {string}", async function (this: CustomWorld, password: string) {
+  const email = getEmail();
+  await this.loginPage!.enterCredentials(email, password);
 });
 
 When("I click the login button", async function (this: CustomWorld) {
   await this.loginPage!.clickLogin();
 });
 
-// Then("I should see the dashboard page", async function (this: CustomWorld) {
-//   await expect(this.page!).toHaveURL(/dashboard/);
-// });
+Then("Verify user is logged in successfully", async function (this: CustomWorld) {
+  await this.loginPage?.verifyUserLoggedIn();
+});

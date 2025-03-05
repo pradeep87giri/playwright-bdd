@@ -1,6 +1,9 @@
 module.exports = {
   default: {
-    paths: ["src/tests/features/*.feature"],
+    paths: [
+      "src/tests/features/signup.feature",
+      "src/tests/features/login.feature"
+    ],
     dryRun: false,
     require: [
       "src/tests/steps/*.ts",

@@ -1,4 +1,5 @@
-import { Page } from "@playwright/test";
+import { expect, Page } from "@playwright/test";
+import { BASE_URL } from "../../config";
 
 export class SignupPage {
     private page: Page;
@@ -14,9 +15,10 @@ export class SignupPage {
     private get txtPassword() { return this.page.locator('#password') }
     private get txtConfirmPassword() { return this.page.locator('#password-confirmation') }
     private get btnCreateAccount() { return this.page.locator('button[title="Create an Account"]') }
+    private get lblMsg() { return this.page.locator('div[role="alert"] div.message-success > div') }
 
     async gotoSignup() {
-        await this.page.goto("https://magento.softwaretestingboard.com/customer/account/create/", { waitUntil: "load" });
+        await this.page.goto(`${BASE_URL}/customer/account/create/`, { waitUntil: "load" });
     }
 
     async enterPersonalInformation(firstName: string, lastName: string) {
@@ -28,18 +30,17 @@ export class SignupPage {
         await this.txtEmailAddress.fill(email);
     }
 
-    async enterPassword(password: string, confirmPassword: string) {
+    async enterPassword(password: string) {
         await this.txtPassword.fill(password);
         await this.txtConfirmPassword.fill(password);
     }
 
     async clickSignup() {
-        // await this.btnCreateAccount.click();
+        await this.btnCreateAccount.click();
     }
 
-    async getSuccessMessage(): Promise<string> {
-        // const msg = await this.page.textContent(".success-message");
-        // return msg ?? '';
-        return '';
+    async verifyMessage(expectedMessage: string) {
+        const msg = await this.lblMsg.textContent();
+        expect(msg).toBe(expectedMessage)
     }
 }
