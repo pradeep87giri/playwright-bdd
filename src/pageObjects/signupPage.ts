@@ -1,4 +1,4 @@
-import { expect, Page } from "@playwright/test";
+import { expect, Locator, Page } from "@playwright/test";
 import { BASE_URL } from "../../config";
 
 export class SignupPage {
@@ -16,6 +16,7 @@ export class SignupPage {
     private get txtConfirmPassword() { return this.page.locator('#password-confirmation') }
     private get btnCreateAccount() { return this.page.locator('button[title="Create an Account"]') }
     private get lblMsg() { return this.page.locator('div[role="alert"] div.message-success > div') }
+    private get lblConfirmMsgError() { return this.page.locator('#password-confirmation-error') }
 
     async gotoSignup() {
         await this.page.goto(`${BASE_URL}/customer/account/create/`, { waitUntil: "load" });
@@ -42,5 +43,24 @@ export class SignupPage {
     async verifyMessage(expectedMessage: string) {
         const msg = await this.lblMsg.textContent();
         expect(msg).toBe(expectedMessage)
+    }
+
+    async verifyErrorMsg(expectedMsg: string, element: string) {
+        let ele: Locator
+        // if (element.includes("First")) {
+
+        // } else if (element.includes("Last")) {
+
+        // } else if (element.includes("Email")) {
+
+        // }
+        // else if (element == "Password") {
+
+        // } else if (element.includes("Confirm")) {
+            ele = this.lblConfirmMsgError;
+        // }
+
+        console.log(await ele.textContent())
+        await expect(ele).toHaveText(expectedMsg);
     }
 }
