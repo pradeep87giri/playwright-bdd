@@ -70,9 +70,9 @@ Feature: Signup Functionality
     Then I should see an error message "<Error Message>" on "<Field>"
 
     Examples:
-      | First Name | Last Name | Email            | Password      | Confirm Password | Error Message               | Field            |
-      |            | Giri      | test@example.com | SecurePass123 | SecurePass123    | "This is a required field." | First Name       |
-      | Pradeep    |           | test@example.com | SecurePass123 | SecurePass123    | "This is a required field." | Last Name        |
-      | Pradeep    | Giri      |                  | SecurePass123 | SecurePass123    | "This is a required field." | Email            |
-      | Pradeep    | Giri      | test@example.com |               | SecurePass123    | "This is a required field." | Password         |
-      | Pradeep    | Giri      | test@example.com | SecurePass123 |                  | "This is a required field." | Confirm Password |
+      | First Name | Last Name | Email            | Password      | Confirm Password | Error Message             | Field            |
+      |            | Giri      | testghjhasd@example.com | SecurePass123 | SecurePass123    | This is a required field. | First Name       |
+      | Pradeep    |           | testghjhasd@example.com | SecurePass123 | SecurePass123    | This is a required field. | Last Name        |
+      | Pradeep    | Giri      |                  | SecurePass123 | SecurePass123    | This is a required field. | Email            |
+      | Pradeep    | Giri      | testghjhasd@example.com |               | SecurePass123    | This is a required field. | Password         |
+      | Pradeep    | Giri      | testghjhasd@example.com | SecurePass123 |                  | This is a required field. | Confirm Password |

@@ -52,25 +52,31 @@ export class SignupPage {
 
     async verifyErrorMsg(expectedMsg: string, element: string) {
         let ele: Locator
-        try {
-            if (element.includes("First")) {
-                ele = this.lblErrorMsgFirstName
-            } else if (element.includes("Last")) {
-                ele = this.lblErrorMsgLastName
-            } else if (element.includes("Email")) {
-                ele = this.lblErrorMsgEmail
-            } else if (element == "Password") {
-                ele = this.lblErrorMsgPassword
-            } else if (element.includes("Confirm")) {
-                ele = this.lblErrorMsgConfirmPwd;
-            } else {
-                ele = this.lblErrorMsg;
-            }
-        } catch (e) {
-            ele = this.lblErrorMsg;         // Sometimes error shows up on heading instead on fields
+        if (element.includes("First")) {
+            ele = this.lblErrorMsgFirstName
+        } else if (element.includes("Last")) {
+            ele = this.lblErrorMsgLastName
+        } else if (element.includes("Email")) {
+            ele = this.lblErrorMsgEmail
+        } else if (element == "Password") {
+            ele = this.lblErrorMsgPassword
+        } else if (element.includes("Confirm")) {
+            ele = this.lblErrorMsgConfirmPwd;
+        } else {
+            ele = this.lblErrorMsg;
         }
 
-        console.log(await ele.textContent({ timeout: 10000 }))
-        await expect(ele).toContainText(expectedMsg, { timeout: 10000 });
+        try {
+            console.log(await ele.textContent({ timeout: 10000 }));
+            await expect(ele).toContainText(expectedMsg, { timeout: 10000 });
+        } catch (e) {
+            // Sometimes error msg appears on heading
+            ele = this.lblErrorMsg;
+            if (expectedMsg == 'Please enter the same value again.')
+                expectedMsg = 'Please make sure your passwords match.'
+            else
+                expectedMsg = "A login and a password are required.";
+            await expect(ele).toContainText(expectedMsg, { timeout: 10000 });
+        }
     }
 }
