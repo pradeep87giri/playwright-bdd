@@ -11,7 +11,7 @@ Given("I navigate to the login page", async function (this: CustomWorld) {
   await this.loginPage.goToLogin();
 });
 
-When("I enter email and password {string}", async function (this: CustomWorld, password: string) {
+When("I enter valid email and password {string}", async function (this: CustomWorld, password: string) {
   const email = getEmail();
   await this.loginPage!.enterCredentials(email, password);
 });

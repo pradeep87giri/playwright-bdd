@@ -2,6 +2,7 @@ import { Given, Then, When, setDefaultTimeout } from "@cucumber/cucumber";
 import { getEmail } from "../../../config";
 import { SignupPage } from "../../pageObjects/signupPage";
 import { CustomWorld } from "../support/world";
+import { console } from "inspector";
 
 setDefaultTimeout(60 * 1000);
 
@@ -15,13 +16,14 @@ When("I enter first name {string} and last name {string}", async function (this:
   await this.signupPage!.enterPersonalInformation(firstName, lastName);
 });
 
-When("I enter email", async function (this: CustomWorld) {
+When("I enter a random email", async function (this: CustomWorld) {
   const email = getEmail();
   await this.signupPage!.enterEmail(email);
+  console.log("Email: ", email)
 });
 
-When("I enter password {string} and confirm password", async function (this: CustomWorld, password: string) {
-  await this.signupPage!.enterPassword(password);
+When("I enter password {string} and {string}", async function (this: CustomWorld, password: string, confirmPwd: string) {
+  await this.signupPage!.enterPassword(password, confirmPwd);
 });
 
 When("I click the Create an Account button", async function (this: CustomWorld) {

@@ -30,9 +30,9 @@ export class SignupPage {
         await this.txtEmailAddress.fill(email);
     }
 
-    async enterPassword(password: string) {
+    async enterPassword(password: string, confirmPwd: string) {
         await this.txtPassword.fill(password);
-        await this.txtConfirmPassword.fill(password);
+        await this.txtConfirmPassword.fill(confirmPwd);
     }
 
     async clickSignup() {
