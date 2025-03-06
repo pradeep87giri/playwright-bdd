@@ -18,7 +18,7 @@ Feature: Login Functionality
       | test@test.com    | WrongPass |
       | wrong@test.com   | WrongPass |
 
-  Scenario Outline: Login with empty email and apssword
+  Scenario Outline: Login with empty email and password
     Given I navigate to the login page
     When I enter email "<Email>" and password "<Password>"
     And I click the login button

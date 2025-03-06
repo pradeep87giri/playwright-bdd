@@ -1,0 +1,2048 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "signup-functionality;successful-signup",
+        "keyword": "Scenario Outline",
+        "line": 13,
+        "name": "Successful signup",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1248498250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I navigate to the signup page",
+            "match": {
+              "location": "src/tests/steps/signup.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2496843499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I enter first name \"Pradeep\" and last name \"Giri\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35594333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I enter a valid random email",
+            "match": {
+              "location": "src/tests/steps/signup.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5043582
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I enter password \"SecurePass@123\" and \"SecurePass@123\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15555457
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I click the Create an Account button",
+            "match": {
+              "location": "src/tests/steps/signup.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2889566750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should see a success message \"Thank you for registering with Main Website Store.\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 107071208
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 154426124
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "signup-functionality;signup-with-mismatched-passwords",
+        "keyword": "Scenario Outline",
+        "line": 25,
+        "name": "Signup with mismatched passwords",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 616876209
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I navigate to the signup page",
+            "match": {
+              "location": "src/tests/steps/signup.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1840911707
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I enter first name \"Pradeep\" and last name \"Giri\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23284792
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I enter email \"pradeep.giri@example.com\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4907000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I enter password \"SecurePass123\" and \"SecurePass456\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16573500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I click the Create an Account button",
+            "match": {
+              "location": "src/tests/steps/signup.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26211041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should see an error message \"Please enter the same value again.\" on \"Confirm Password\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7700749
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 137117957
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "signup-functionality;signup-with-an-existing-email",
+        "keyword": "Scenario Outline",
+        "line": 37,
+        "name": "Signup with an existing email",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 601797582
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 28,
+            "name": "I navigate to the signup page",
+            "match": {
+              "location": "src/tests/steps/signup.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1781908958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "I enter first name \"Pradeep\" and last name \"Giri\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36088542
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "I enter email \"test@test.com\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5100291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "I enter password \"SecurePass123\" and \"SecurePass123\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9852957
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "I click the Create an Account button",
+            "match": {
+              "location": "src/tests/steps/signup.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1432764624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "I should see an error message \"There is already an account with this email address.\" on \"Heading\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 210665875
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 120229250
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "signup-functionality;signup-with-an-invalid-email",
+        "keyword": "Scenario Outline",
+        "line": 49,
+        "name": "Signup with an invalid email",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 609305458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 40,
+            "name": "I navigate to the signup page",
+            "match": {
+              "location": "src/tests/steps/signup.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1343371374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "I enter first name \"Pradeep\" and last name \"Giri\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21450834
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "I enter email \"invalid-email\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6099791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "I enter password \"SecurePass123\" and \"SecurePass123\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14334750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "I click the Create an Account button",
+            "match": {
+              "location": "src/tests/steps/signup.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30297417
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 45,
+            "name": "I should see an error message \"Please enter a valid email address\" on \"Email\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4494875
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 127178166
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "signup-functionality;signup-with-a-weak-password",
+        "keyword": "Scenario Outline",
+        "line": 61,
+        "name": "Signup with a weak password",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 608832458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 52,
+            "name": "I navigate to the signup page",
+            "match": {
+              "location": "src/tests/steps/signup.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2735635291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 53,
+            "name": "I enter first name \"Pradeep\" and last name \"Giri\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22503166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 54,
+            "name": "I enter email \"test123@test.com\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4173249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "I enter password \"abc\" and \"abc\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12426415
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 56,
+            "name": "I click the Create an Account button",
+            "match": {
+              "location": "src/tests/steps/signup.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23450417
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 57,
+            "name": "I should see an error message \"Minimum length of this field must be equal or greater than 8 symbols\" on \"Password\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3854457
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 119010625
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "signup-functionality;signup-with-a-weak-password",
+        "keyword": "Scenario Outline",
+        "line": 62,
+        "name": "Signup with a weak password",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 588511958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 52,
+            "name": "I navigate to the signup page",
+            "match": {
+              "location": "src/tests/steps/signup.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1441770208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 53,
+            "name": "I enter first name \"Pradeep\" and last name \"Giri\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21070791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 54,
+            "name": "I enter email \"test123@test.com\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3617500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "I enter password \"abcdefghij\" and \"abcdefghij\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13692708
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 56,
+            "name": "I click the Create an Account button",
+            "match": {
+              "location": "src/tests/steps/signup.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25907209
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 57,
+            "name": "I should see an error message \"Minimum of different classes of characters in password is 3. Classes of characters: Lower Case, Upper Case, Digits, Special Characters.\" on \"Password\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4563500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 114379832
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "signup-functionality;signup-with-missing-fields",
+        "keyword": "Scenario Outline",
+        "line": 74,
+        "name": "Signup with missing fields",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 607626000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 65,
+            "name": "I navigate to the signup page",
+            "match": {
+              "location": "src/tests/steps/signup.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1295386833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 66,
+            "name": "I enter first name \"\" and last name \"Giri\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25621208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 67,
+            "name": "I enter email \"testghjhasd@example.com\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4747709
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 68,
+            "name": "I enter password \"SecurePass123\" and \"SecurePass123\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15506207
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 69,
+            "name": "I click the Create an Account button",
+            "match": {
+              "location": "src/tests/steps/signup.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32900292
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 70,
+            "name": "I should see an error message \"This is a required field.\" on \"First Name\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4651208
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 189252042
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "signup-functionality;signup-with-missing-fields",
+        "keyword": "Scenario Outline",
+        "line": 75,
+        "name": "Signup with missing fields",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 604482790
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 65,
+            "name": "I navigate to the signup page",
+            "match": {
+              "location": "src/tests/steps/signup.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1900382791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 66,
+            "name": "I enter first name \"Pradeep\" and last name \"\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22894124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 67,
+            "name": "I enter email \"testghjhasd@example.com\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3568041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 68,
+            "name": "I enter password \"SecurePass123\" and \"SecurePass123\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12568957
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 69,
+            "name": "I click the Create an Account button",
+            "match": {
+              "location": "src/tests/steps/signup.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72378291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 70,
+            "name": "I should see an error message \"This is a required field.\" on \"Last Name\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6169582
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 124841124
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "signup-functionality;signup-with-missing-fields",
+        "keyword": "Scenario Outline",
+        "line": 76,
+        "name": "Signup with missing fields",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 828114208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 65,
+            "name": "I navigate to the signup page",
+            "match": {
+              "location": "src/tests/steps/signup.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1364735874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 66,
+            "name": "I enter first name \"Pradeep\" and last name \"Giri\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25398957
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 67,
+            "name": "I enter email \"\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4564583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 68,
+            "name": "I enter password \"SecurePass123\" and \"SecurePass123\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10746500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 69,
+            "name": "I click the Create an Account button",
+            "match": {
+              "location": "src/tests/steps/signup.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 71126583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 70,
+            "name": "I should see an error message \"This is a required field.\" on \"Email\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4074874
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 127476584
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "signup-functionality;signup-with-missing-fields",
+        "keyword": "Scenario Outline",
+        "line": 77,
+        "name": "Signup with missing fields",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 875152500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 65,
+            "name": "I navigate to the signup page",
+            "match": {
+              "location": "src/tests/steps/signup.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1804792290
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 66,
+            "name": "I enter first name \"Pradeep\" and last name \"Giri\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21582542
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 67,
+            "name": "I enter email \"testghjhasd@example.com\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3652499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 68,
+            "name": "I enter password \"\" and \"SecurePass123\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8800583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 69,
+            "name": "I click the Create an Account button",
+            "match": {
+              "location": "src/tests/steps/signup.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60684042
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 70,
+            "name": "I should see an error message \"This is a required field.\" on \"Password\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3928208
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 115947542
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "signup-functionality;signup-with-missing-fields",
+        "keyword": "Scenario Outline",
+        "line": 78,
+        "name": "Signup with missing fields",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 849675208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 65,
+            "name": "I navigate to the signup page",
+            "match": {
+              "location": "src/tests/steps/signup.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1283542166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 66,
+            "name": "I enter first name \"Pradeep\" and last name \"Giri\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20189333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 67,
+            "name": "I enter email \"testghjhasd@example.com\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5021124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 68,
+            "name": "I enter password \"SecurePass123\" and \"\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10750833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 69,
+            "name": "I click the Create an Account button",
+            "match": {
+              "location": "src/tests/steps/signup.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51809375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 70,
+            "name": "I should see an error message \"This is a required field.\" on \"Confirm Password\"",
+            "match": {
+              "location": "src/tests/steps/signup.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3906415
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 120085584
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "signup-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Signup Functionality",
+    "tags": [],
+    "uri": "src/tests/features/signup.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-functionality;successful-login",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Successful login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 855910500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "src/tests/steps/login.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1505559000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I enter valid email and password \"SecurePass@123\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39468541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I click the login button",
+            "match": {
+              "location": "src/tests/steps/login.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1410337584
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "Verify user is logged in successfully",
+            "match": {
+              "location": "src/tests/steps/login.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35990207
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 122451459
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;login-with-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 17,
+        "name": "Login with invalid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 833587625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "src/tests/steps/login.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1660095084
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I enter email \"invalid@test.com\" and password \"Secure123\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43552500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click the login button",
+            "match": {
+              "location": "src/tests/steps/login.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1228445500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see login error message \"The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.\" on \"Heading\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 213695375
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 114319999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;login-with-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 18,
+        "name": "Login with invalid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 807176917
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "src/tests/steps/login.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1276384458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I enter email \"test@test.com\" and password \"WrongPass\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18979583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click the login button",
+            "match": {
+              "location": "src/tests/steps/login.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1110374500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see login error message \"The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.\" on \"Heading\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 209671500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 112266083
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;login-with-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 19,
+        "name": "Login with invalid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 808850291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "src/tests/steps/login.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1313425332
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I enter email \"wrong@test.com\" and password \"WrongPass\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34937207
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click the login button",
+            "match": {
+              "location": "src/tests/steps/login.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1052512957
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see login error message \"The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.\" on \"Heading\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 215047583
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 120625625
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;login-with-empty-email-and-apssword",
+        "keyword": "Scenario Outline",
+        "line": 29,
+        "name": "Login with empty email and apssword",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 830145124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "src/tests/steps/login.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500819167
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "I enter email \"\" and password \"Secure123\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37573458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I click the login button",
+            "match": {
+              "location": "src/tests/steps/login.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1094336583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I should see login error message \"This is a required field\" on \"Email\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 119869041
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 120681584
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;login-with-empty-email-and-apssword",
+        "keyword": "Scenario Outline",
+        "line": 30,
+        "name": "Login with empty email and apssword",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 858084624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "src/tests/steps/login.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1773756292
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "I enter email \"test@test.com\" and password \"\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22698167
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I click the login button",
+            "match": {
+              "location": "src/tests/steps/login.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72439041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I should see login error message \"This is a required field\" on \"Password\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4705125
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 119281250
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;login-with-empty-email-and-apssword",
+        "keyword": "Scenario Outline",
+        "line": 31,
+        "name": "Login with empty email and apssword",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 857509208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "src/tests/steps/login.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1327557249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "I enter email \"\" and password \"\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20610874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I click the login button",
+            "match": {
+              "location": "src/tests/steps/login.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72243500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I should see login error message \"This is a required field\" on \"Email and Password\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67500707
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 121005292
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;login-with-invalid-email-format",
+        "keyword": "Scenario Outline",
+        "line": 41,
+        "name": "Login with invalid email format",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 815754542
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 34,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "src/tests/steps/login.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1507452792
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I enter email \"test.com\" and password \"Secure123\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35184749
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "I click the login button",
+            "match": {
+              "location": "src/tests/steps/login.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67893542
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "I should see login error message \"Please enter a valid email address\" on \"Email\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2862075457
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 133324415
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;login-with-invalid-email-format",
+        "keyword": "Scenario Outline",
+        "line": 42,
+        "name": "Login with invalid email format",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 840003958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 34,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "src/tests/steps/login.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1915487540
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I enter email \"test@.com\" and password \"Secure123\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24796208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "I click the login button",
+            "match": {
+              "location": "src/tests/steps/login.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49331333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "I should see login error message \"Please enter a valid email address\" on \"Email\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67037083
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 114120209
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;login-with-invalid-email-format",
+        "keyword": "Scenario Outline",
+        "line": 43,
+        "name": "Login with invalid email format",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 839651750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 34,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "src/tests/steps/login.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2511911833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I enter email \"@test.com\" and password \"Secure123\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37413750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "I click the login button",
+            "match": {
+              "location": "src/tests/steps/login.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53816791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "I should see login error message \"Please enter a valid email address\" on \"Email\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67699666
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 127811415
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;login-with-invalid-email-format",
+        "keyword": "Scenario Outline",
+        "line": 44,
+        "name": "Login with invalid email format",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 831248750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 34,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "src/tests/steps/login.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1365780417
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I enter email \"test@test\" and password \"Secure123\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18989000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "I click the login button",
+            "match": {
+              "location": "src/tests/steps/login.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54250417
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "I should see login error message \"Please enter a valid email address\" on \"Email\"",
+            "match": {
+              "location": "src/tests/steps/login.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66533165
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 122594457
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login Functionality",
+    "tags": [],
+    "uri": "src/tests/features/login.feature"
+  }
+]
