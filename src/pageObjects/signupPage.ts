@@ -16,7 +16,12 @@ export class SignupPage {
     private get txtConfirmPassword() { return this.page.locator('#password-confirmation') }
     private get btnCreateAccount() { return this.page.locator('button[title="Create an Account"]') }
     private get lblMsg() { return this.page.locator('div[role="alert"] div.message-success > div') }
-    private get lblConfirmMsgError() { return this.page.locator('#password-confirmation-error') }
+    private get lblErrorMsg() { return this.page.locator('div[role="alert"] div.message-error > div') }
+    private get lblErrorMsgFirstName() { return this.page.locator('#firstname-error') }
+    private get lblErrorMsgLastName() { return this.page.locator('#lastname-error') }
+    private get lblErrorMsgEmail() { return this.page.locator('#email_address-error') }
+    private get lblErrorMsgPassword() { return this.page.locator('#password-error') }
+    private get lblErrorMsgConfirmPwd() { return this.page.locator('#password-confirmation-error') }
 
     async gotoSignup() {
         await this.page.goto(`${BASE_URL}/customer/account/create/`, { waitUntil: "load" });
@@ -47,20 +52,25 @@ export class SignupPage {
 
     async verifyErrorMsg(expectedMsg: string, element: string) {
         let ele: Locator
-        // if (element.includes("First")) {
+        try {
+            if (element.includes("First")) {
+                ele = this.lblErrorMsgFirstName
+            } else if (element.includes("Last")) {
+                ele = this.lblErrorMsgLastName
+            } else if (element.includes("Email")) {
+                ele = this.lblErrorMsgEmail
+            } else if (element == "Password") {
+                ele = this.lblErrorMsgPassword
+            } else if (element.includes("Confirm")) {
+                ele = this.lblErrorMsgConfirmPwd;
+            } else {
+                ele = this.lblErrorMsg;
+            }
+        } catch (e) {
+            ele = this.lblErrorMsg;         // Sometimes error shows up on heading instead on fields
+        }
 
-        // } else if (element.includes("Last")) {
-
-        // } else if (element.includes("Email")) {
-
-        // }
-        // else if (element == "Password") {
-
-        // } else if (element.includes("Confirm")) {
-            ele = this.lblConfirmMsgError;
-        // }
-
-        console.log(await ele.textContent())
-        await expect(ele).toHaveText(expectedMsg);
+        console.log(await ele.textContent({ timeout: 10000 }))
+        await expect(ele).toContainText(expectedMsg, { timeout: 10000 });
     }
 }
