@@ -1,4 +1,4 @@
-# Incubyte Assignment
+# Playwright-BDD Framework
 
 This project is to test signup and login functionalities of Magneto website using Playwright and Cucumber.
 
